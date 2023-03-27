@@ -1,5 +1,4 @@
 import React from  'react';
-import {useNavigate} from "react-router-dom";
 import shareVideo from '../assets/share.mp4';
 import  logo from '../assets/logo.png';
 const Login = ()=>{
