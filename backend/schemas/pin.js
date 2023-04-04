@@ -41,12 +41,12 @@ export default {
         //     title: 'PostedBy',
         //     type: 'postedBy'
         // },
-        // {
-        //     name: 'save',
-        //     title: 'save',
-        //     type: 'array',
-        //     of: [{type: 'save'}]
-        // },
+        {
+            name: 'save',
+            title: 'save',
+            type: 'array',
+            of: [{type: 'save'}]
+        },
         {
             name: 'comments',
             title: 'Comments',
