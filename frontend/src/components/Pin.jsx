@@ -1,8 +1,9 @@
 import React from "react";
-function  Pin(){
+import {urlFor} from "../client";
+function  Pin({pin: {image, id, destination}}){
     return(
         <div>
-            Pin
+            <img className="rounded-lg w-full" alt="user-post" src={urlFor(image).width(250).url()}/>
         </div>
     );
 }
