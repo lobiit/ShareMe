@@ -4,13 +4,15 @@ import {AiOutlineCloudUpload} from "react-icons/ai";
 import {useNavigate} from "react-router-dom";
 import {client} from "../client";
 import {MdDelete} from "react-icons/md";
+import {categories} from "../utils/data";
 function  CreatePin(){
     const [title, setTitle] = useState('');
     const [about, setAbout] = useState('');
     const [destination, setDestination] = useState('');
     const [loading, setLoading] = useState(false);
     const [fields, setFields] = useState(null);
-    const [imageAsset, setImageAsset] = useState(null);
+    const [category, setCategory] = useState();
+    const [imageAsset, setImageAsset] = useState();
     const [wrongImageType, setWrongImageType] = useState(false);
 
     const navigate = useNavigate();
@@ -72,6 +74,47 @@ function  CreatePin(){
                                 </button>
                             </div>
                         )}
+                    </div>
+                </div>
+                <div className="flex flex-1 flex-col gap-6 lg:pl-5 mt-5 w-full  ">
+                    <input
+                    type="text"
+                    value={title}
+                    onChange={(e) => setTitle(e.target.value)}
+                    placeholder="Add your title here"
+                    className="outline-none text-2xl sm:text-3xl font-bold border-b-2 border-gray-200 p-2"
+                    />
+                    <input
+                        type="text"
+                        value={about}
+                        onChange={(e) => setAbout(e.target.value)}
+                        placeholder="What is your pin about"
+                        className="outline-none text-base sm:text-lg border-b-2 border-gray-200 p-2"
+                    />
+                    <input
+                        type="text"
+                        value={destination}
+                        onChange={(e) => setDestination(e.target.value)}
+                        placeholder="Add a destination link"
+                        className="outline-none text-base sm:text-lg border-b-2 border-gray-200 p-2"
+                    />
+                    <div className="flex flex-col">
+                        <div >
+                            <p className="mb-2 font-semibold text-lg sm:text-xl">Choose Pin Category</p>
+                            <select
+                                onChange={(e) => {
+                                    setCategory(e.target.value);
+                                }}
+                                className="outline-none w-4/5 text-base border-b-2 border-gray-200 p-2 rounded-md cursor-pointer"
+                            >
+                                <option value="others" className="sm:text-bg bg-white">Select Category</option>
+                                {categories.map((item) => (
+                                    <option className="text-base border-0 outline-none capitalize bg-white text-black " value={item.name}>
+                                        {item.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
                     </div>
                 </div>
             </div>
