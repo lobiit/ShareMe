@@ -3,6 +3,7 @@ import {urlFor} from "../client";
 import {v4 as uuidv4} from 'uuid';
 import {useNavigate} from "react-router-dom";
 import {MdDownloadForOffline} from "react-icons/md";
+import {BsFillArrowUpRightCircleFill} from "react-icons/bs";
 function  Pin({pin: {image, id, destination}}){
     const [postHovered, setPostHovered] = useState(false);
 
@@ -25,6 +26,19 @@ function  Pin({pin: {image, id, destination}}){
                                     <MdDownloadForOffline/>
                                 </a>
                             </div>
+
+                        </div>
+                        <div  className="flex justify-between items-center gap-2 w-full">
+                            {destination && (
+                                <a href={destination}
+                                   target="_blank"
+                                   rel="noreferrer"
+                                   className="bg-white flex items-center gap-2 text-black font-bold p-2 pl-4 pr-4 rounded-full opacity-70 hover:100 hover:shadow-md"
+                                >
+                                    <BsFillArrowUpRightCircleFill/>
+                                    {destination.length > 20? destination.slice(8, 20): destination.slice(8)}
+                                </a>
+                            )}
                         </div>
 
                     </div>
