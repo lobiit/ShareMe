@@ -6,7 +6,7 @@ export const client = createClient({
     dataset: 'production',
     apiVersion: '2021-10-21',
     useCdn: true,
-    token: process.env.REACT_APP_SANITY_TOKEN,
+    token: 'skBF7UiErNNQ0y6u4ZwHXamhtCFaoSXAVlgCkV3ZNvBOA7uc3YIAn9Nh0wW2COvsGX8reOvR8dbKvFzBqkCapQypJNoZdEJbchtkWFUapbbcNjoYlz2EsUlq9EWYH4tHrl0uLyaXIgmkdy2eprRCaC1SuUhEVp5vzvYxCcsSQCcsAIkEKiTc',
 });
 
 const builder = imageUrlBuilder(client);

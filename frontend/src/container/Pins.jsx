@@ -16,7 +16,7 @@ function  Pins(){
                 <Routes>
                     <Route path='/' element={<Feed/>}/>
                     <Route path='/category/:categoryId' element={<Feed/>}/>
-                    <Route path='/pin-detail/:pinId' element={<PinDetail/>}/>
+                    <Route path="/pin-detail/:pinId" element={<PinDetail />} />
                     <Route path='/create-pin' element={<CreatePin/>}/>
                     <Route path='/search' element={<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>}/>
                 </Routes>
