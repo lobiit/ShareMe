@@ -62,6 +62,10 @@ export const pinDetailQuery = (pinId) => {
     about,
     category,
     destination,
+    comments[]{
+        comment,
+        _key,
+    },
   }`;
     return query;
 };
@@ -75,6 +79,9 @@ export const pinDetailMorePinQuery = (pin) => {
     },
     _id,
     destination,
+    comments,
+  
+    
   }`;
     return query;
 };
@@ -88,6 +95,7 @@ export const searchQuery = (searchTerm) => {
         },
             _id,
             destination,
+            
 
           }`;
     return query;

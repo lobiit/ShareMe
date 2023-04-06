@@ -8,5 +8,5 @@ export default{
             title: 'Comment',
             type: 'string'
         },
-    ]
-}
+    ],
+};
