@@ -4,7 +4,7 @@ import {v4 as uuidv4} from 'uuid';
 import {useNavigate} from "react-router-dom";
 import {MdDownloadForOffline} from "react-icons/md";
 import {BsFillArrowUpRightCircleFill} from "react-icons/bs";
-function  Pin({pin: {image, id, destination}}){
+function  Pin({pin: {image, _id, destination}}){
     const [postHovered, setPostHovered] = useState(false);
 
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ function  Pin({pin: {image, id, destination}}){
             <div className="relative cursor-zoom-in w-auto hover:shadow-lg rounded-lg overflow-hidden transition-all duration-500  ease-in-out"
                  onMouseEnter={() => setPostHovered(true)}
                  onMouseLeave={() => setPostHovered(false)}
-            onClick={() => navigate(`/pin-detail/${id}`)}>
+            onClick={() => navigate(`/pin-detail/${_id}`)}>
                 <img className="rounded-lg w-full" alt="user-post" src={urlFor(image).width(250).url()}/>
                 {postHovered && (
                     <div className="absolute top-0 w-full h-full flex flex-col justify-between p-1 pr-2 pt-2 pb-2 z-50"

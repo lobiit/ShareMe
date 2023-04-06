@@ -9,7 +9,7 @@ import { pinDetailMorePinQuery, pinDetailQuery } from '../utils/data';
 import Spinner from './Spinner';
 
 const PinDetail = () => {
-    const { pinId } = useParams();
+    let { pinId } = useParams();
     const [pins, setPins] = useState();
     const [pinDetail, setPinDetail] = useState();
     const [comment, setComment] = useState('');
@@ -24,6 +24,7 @@ const PinDetail = () => {
                 console.log(data);
                 if (data[0]) {
                     const query1 = pinDetailMorePinQuery(data[0]);
+                    console.log(query1)
                     client.fetch(query1).then((res) => {
                         setPins(res);
                     });
@@ -35,7 +36,6 @@ const PinDetail = () => {
     useEffect(() => {
         fetchPinDetails();
     }, [pinId]);
-
     const addComment = () => {
         if (comment) {
             setAddingComment(true);

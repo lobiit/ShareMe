@@ -62,11 +62,6 @@ export const pinDetailQuery = (pinId) => {
     about,
     category,
     destination,
-    comments[]{
-      comment,
-      _key,
-
-    }
   }`;
     return query;
 };
