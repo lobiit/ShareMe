@@ -26,7 +26,8 @@ function CreatePin() {
       type === 'image/svg' ||
       type === 'image/jpeg' ||
       type === 'image/gif' ||
-      type === 'image/tiff'
+      type === 'image/tiff' ||
+      type === 'image/jpg'
     ) {
       setWrongImageType(false);
       setLoading(true);
