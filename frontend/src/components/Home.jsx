@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { HiMenu } from 'react-icons/hi';
 import { Link, Route, Routes } from 'react-router-dom';
 import { AiFillCloseCircle } from 'react-icons/ai';
-import UserProfile from './UserProfile';
 import Pins from '../container/Pins';
 import logo from '../assets/logo.png';
 import SideBar from './Sidebar';
@@ -49,7 +48,6 @@ function Home() {
 
       <div className="pb-2 flex-1 h-screen overflow-y-scroll" ref={scrollRef}>
         <Routes>
-          <Route path="user-profile" element={<UserProfile />} />
           <Route path="/*" element={<Pins />} />
         </Routes>
       </div>
