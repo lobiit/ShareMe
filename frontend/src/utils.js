@@ -1,5 +1,5 @@
-export const searchQuery  = (searchTerm)=>{
-    const query = `*[_type == "pin" && title match '${searchTerm}*' || category match '${searchTerm}*' || about match '${searchTerm}*' ]{
+export const searchQuery = (searchTerm) => {
+  const query = `*[_type == "pin" && title match '${searchTerm}*' || category match '${searchTerm}*' || about match '${searchTerm}*' ]{
         image {
             asset->{
                 url
@@ -8,10 +8,10 @@ export const searchQuery  = (searchTerm)=>{
         _id,
         destination,
         
-    }`
-    return query;
+    }`;
+  return query;
 };
- export  const feedQuery = `*[_type == "pin"] | order(_createdAt desc) |
+export const feedQuery = `*[_type == "pin"] | order(_createdAt desc) |
  
  {
   image {

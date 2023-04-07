@@ -1,9 +1,6 @@
-import React from "react";
-function  Search(){
-    return(
-        <div>
-            Pins
-        </div>
-    );
+import React from 'react';
+
+function Search() {
+  return <div>Pins</div>;
 }
-export  default  Search;
+export default Search;
